@@ -1,4 +1,4 @@
-package com.solidpatterns.algorithms;
+package com.solidpatterns.algodata.algorithms;
 
 public class BinarySearch {
 
@@ -6,16 +6,16 @@ public class BinarySearch {
     }
 
     public Integer search(int[] list, int item) {
-        if(list == null || list.length == 0) throw new IllegalArgumentException("list cannot be null or empty.");
+        if (list == null || list.length == 0) throw new IllegalArgumentException("list cannot be null or empty.");
 
         int low = 0;
-        int high = list.length-1;
+        int high = list.length - 1;
 
         while (low <= high) {
             int mid = (low + high) / 2;
             int guess = list[mid];
 
-            if(guess == item) {
+            if (guess == item) {
                 return mid;
             }
 
